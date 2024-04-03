@@ -3,7 +3,7 @@
 from typing import List
 
 def plusOne(digits: List[int]) -> List[int]:
-    for i in range(len(digits)-1,-1,-1):
+    for i in range(len(digits)-1,-1,-1):  # 2nd -1 is for reversing, 3rd -1 is for decrement by -1
         if digits[i]==9:
            digits[i]=0
         else:
