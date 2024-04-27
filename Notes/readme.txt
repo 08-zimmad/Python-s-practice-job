@@ -1,0 +1,1 @@
+these notes wont open in github mobile app. you gotta download them and use OneNote App
