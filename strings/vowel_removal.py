@@ -15,6 +15,6 @@ print(result)
 # using regex
 import re
 
-# str="my name is zimmad"
+# str="my name is zimmad"2
 str=re.sub("[a,e,i,o,u]","",str)
 print(str)
