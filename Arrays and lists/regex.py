@@ -13,7 +13,7 @@ match = re.match(r'This', 'This is a string')
 if match: # Object type match or None
     print("Pattern found:", match.group())
 
-   
+
 
 # returns list of all occurrences
 matches = re.findall(r'is', 'This is a istring')
