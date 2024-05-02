@@ -6,6 +6,6 @@ def addition(x,y):
     return x
 
 
-a=21
-b=2
+a=2
+b=23
 print(addition(a,b))
