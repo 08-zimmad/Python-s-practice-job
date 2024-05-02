@@ -1,6 +1,6 @@
 def fac(n):
     res=1
-    for i in range(n,0,-1):
+    for i in range(1,n+1):
         res=res*i
     print("factorial:", res)
 
@@ -10,9 +10,9 @@ def fac(n):
 # using recursion
 
 def fac1(n):
-    rem=1
-    if n>0:
-        return rem * fac1(n-1)
-    return 1
+    if n==0 or n==1:
+        return 1
+    return n * fac1(n-1)
+    
     
 print(fac1(5))
