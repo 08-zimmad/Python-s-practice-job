@@ -12,3 +12,5 @@ def solution(a):
         seen.add(num)
     return -1
 
+
+
