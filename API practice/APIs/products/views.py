@@ -25,15 +25,17 @@ class ProductsAPI(APIView):
         if product_serializer.is_valid():
             product_serializer.save()
             return Response({"msg":"Data Saved"}, status=status.HTTP_201_CREATED)
-        return Response(product_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(product_serializer.error_messages, status=status.HTTP_400_BAD_REQUEST)
     
 
     def patch(self,request,pk):
         product=Product.objects.filter(id=pk)
         if product.exists():
             product_serializer=ProductSerializer(product.first(),data=request.data, partial=True)
-            product_serializer.save()
-            return Response({'msg':"Product Updated"}, status=status.HTTP_200_OK)
+            if product_serializer.is_valid():
+                product_serializer.save()
+                return Response({'msg':"Product Updated"}, status=status.HTTP_200_OK)
+            return Response(product_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         return Response({'error':"Selected Product Not Found"},status=status.HTTP_404_NOT_FOUND)
     
 
