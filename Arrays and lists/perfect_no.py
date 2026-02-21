@@ -11,4 +11,4 @@ def Chk_Perfect(n):
     else:
         print("It is not a perfect square")
  
-Chk_Perfect(8128)
+Chk_Perfect(8)
